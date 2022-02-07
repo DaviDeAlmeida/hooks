@@ -1,0 +1,16 @@
+import React from "react";
+
+const UseCallbackButtons = (props) => {
+    console.log("Render...")
+    return (
+        <div className="center">
+                <div>
+                    <button className="btn" onClick={() => props.inc(6)}>+6</button>
+                    <button className="btn" onClick={() => props.inc(12)}>+12</button>
+                    <button className="btn" onClick={() => props.inc(18)}>+18</button>
+                </div>
+            </div>
+    )
+}
+
+export default React.memo(UseCallbackButtons) // Só renderiza novamente se as propriedades modifiquem
